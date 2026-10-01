@@ -1,0 +1,11 @@
+[project]
+name = "patient-or-clinician"
+version = "0.1.0"
+description = "Auditing whether a sepsis model sees the patient or the measurement process, under cross-hospital shift."
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scikit-learn>=1.4"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

@@ -1,0 +1,17 @@
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+data/*
+!data/.gitkeep
+results/*
+!results/.gitkeep
+*.psv
+*.pkl
+*.joblib
+*.ckpt
+.DS_Store

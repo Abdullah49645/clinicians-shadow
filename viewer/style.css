@@ -1,0 +1,19 @@
+:root{--bg:#faf8f4;--fg:#1d1d1b;--mut:#6b6a63;--rule:#dcd8cd;--phys:#2f5d8a;--proc:#b4572d;--both:#4a4a44;--lab:#a03030}
+@media(prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ecebe5;--mut:#9a988f;--rule:#34332e;--phys:#79a8d6;--proc:#e08a5c;--both:#bdbbb2;--lab:#e07070}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 Georgia,"Iowan Old Style",serif}
+header{display:flex;justify-content:space-between;align-items:baseline;padding:22px 56px;border-bottom:1px solid var(--rule)}
+.mark{font-size:18px;letter-spacing:.02em}nav button{font:13px ui-sans-serif,system-ui,sans-serif;letter-spacing:.06em;text-transform:uppercase;background:none;border:0;color:var(--mut);margin-left:22px;padding:4px 0;cursor:pointer;border-bottom:1px solid transparent}
+nav button.on{color:var(--fg);border-color:var(--fg)}
+main{max-width:1080px;margin:0 auto;padding:56px 56px 80px;animation:f .25s}@keyframes f{from{opacity:0}to{opacity:1}}
+h1{font-size:40px;line-height:1.15;font-weight:400;margin:0 0 28px;max-width:20em}h2{font-weight:400;font-size:24px;margin:40px 0 8px}
+.sans{font-family:ui-sans-serif,system-ui,sans-serif}.mut{color:var(--mut)}.two{display:grid;grid-template-columns:1fr 1fr;gap:48px;margin:36px 0}
+.k{font:12px ui-sans-serif,system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}.phys{color:var(--phys)}.proc{color:var(--proc)}
+.col{border-top:2px solid currentColor;padding-top:10px}.col p{margin:6px 0;color:var(--fg)}
+#banner{background:var(--lab);color:#fff;padding:8px 56px;font:13px ui-sans-serif,system-ui,sans-serif}
+footer{border-top:1px solid var(--rule);padding:18px 56px;color:var(--mut);font:12px ui-sans-serif,system-ui,sans-serif}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:36px 40px;margin-top:24px}
+table.m{border-collapse:collapse;font:13px ui-sans-serif,system-ui,sans-serif;width:100%}.m th{font-weight:400;color:var(--mut);text-align:center;padding:4px}
+.m td{border:1px solid var(--rule);padding:12px 6px;text-align:center;font-variant-numeric:tabular-nums}.m td b{display:block;font-size:20px;font-weight:500}.m td span{color:var(--mut);font-size:11px}
+.m td.x{border-width:2px}.ctl{font:13px ui-sans-serif,system-ui,sans-serif;margin:8px 0 0}.ctl button,.ctl select{font:inherit;margin-right:8px;padding:4px 10px;border:1px solid var(--rule);background:none;color:var(--fg);cursor:pointer}
+.ctl button.on{background:var(--fg);color:var(--bg)}svg text{font:11px ui-sans-serif,system-ui,sans-serif;fill:var(--mut)}
+.empty{border:1px dashed var(--rule);padding:24px;color:var(--mut)}code{font-size:.9em}

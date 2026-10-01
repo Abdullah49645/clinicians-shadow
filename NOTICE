@@ -1,0 +1,22 @@
+Patient or Clinician?
+
+Software license: MIT (see LICENSE). MIT was chosen because every runtime
+dependency (numpy, pandas, scikit-learn: BSD-3-Clause; pytest, dev only: MIT) is
+permissive and the viewer has no third-party code or assets (system fonts only).
+
+Data: this repository contains NO data. It analyses the PhysioNet/Computing in
+Cardiology Challenge 2019 training data, which users download themselves from
+PhysioNet. That dataset has its own license and attribution terms, which are NOT
+covered by this repository's MIT license. To our understanding PhysioNet lists it
+under Creative Commons Attribution 4.0 (CC BY 4.0); this could not be verified from
+the build environment -- confirm on the dataset page before redistributing any
+derived data. Required citations:
+
+  Reyna MA, et al. Early Prediction of Sepsis From Clinical Data: The
+  PhysioNet/Computing in Cardiology Challenge 2019. Crit Care Med 2020;48(2):210-217.
+  Goldberger AL, et al. PhysioBank, PhysioToolkit, and PhysioNet. Circulation
+  2000;101(23):e215-e220.
+
+Generated files in results/ are derived from that data (aggregate metrics and a
+small number of per-patient time series). Review the dataset terms before
+publishing results/attribution_cases.json.
