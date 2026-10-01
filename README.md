@@ -3,7 +3,7 @@
 *Patient or clinician? Auditing what a sepsis model actually sees.*
 
 > **Built for the Global Innovation Build Challenge V2 (GIBC V2) — Track 02: Applied — Medical Technology & Finance.**
-> **Live demo:** <VERCEL_LINK_HERE> &nbsp;·&nbsp; **Demo video:** <VIDEO_LINK_HERE>
+> **Live demo:** <https://clinicians-shadow.vercel.app/viewer/> &nbsp;·&nbsp; **Demo video:** <https://youtu.be/5SNOAhjxOK4>
 
 
 **When a clinical model predicts sepsis, is it seeing the patient — or seeing what clinicians chose to measure?**
