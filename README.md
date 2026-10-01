@@ -5,7 +5,6 @@
 > **Built for the Global Innovation Build Challenge V2 (GIBC V2) — Track 02: Applied — Medical Technology & Finance.**
 > **Live demo:** <VERCEL_LINK_HERE> &nbsp;·&nbsp; **Demo video:** <VIDEO_LINK_HERE>
 
-![Clinician's Shadow: the patient case and cross-hospital transfer views](docs/img/banner.png)
 
 **When a clinical model predicts sepsis, is it seeing the patient — or seeing what clinicians chose to measure?**
 
@@ -22,6 +21,10 @@ process**, train matched models on each, and test which survives transfer betwee
 
 Clinical records contain both. Process patterns can be predictive (sicker or more-suspected patients get more tests),
 and they are set by local workflow, so they may not transfer. We test whether this happens here; we do **not** assume it.
+
+The viewer opens on this framing:
+
+![The question view of the viewer: physiology versus process](docs/img/1-question.png)
 
 ## The experiment
 
@@ -41,30 +44,6 @@ Scenarios: `within_A`, `within_B` (patient-grouped CV), `A_to_B`, `B_to_A`.
 
 Feature provenance is enforced by column prefix (`b__`, `v__`, `p__`) and by signatures: `process_features` receives only the boolean mask;
 `physiology_locf` only values. See `docs/temporal_rules.md`.
-
-## Screenshots
-
-All screenshots are from the included viewer, rendered from the committed `results/*.json` (subset run: 3,000 patients per hospital).
-
-**1. The question.** Physiology (what was happening to the patient) versus process (what clinicians chose to measure).
-
-![The question view](docs/img/1-question.png)
-
-**2. Cross-hospital transfer.** One 2x2 grid per model: the diagonal is within-hospital cross-validation, the bold off-diagonal cells are trained on one hospital and tested on the other. Switch the metric between AUROC, AUPRC and Brier.
-
-![Transfer matrices for each model](docs/img/2-transfer.png)
-
-**3. Patient case, all information.** Top: heart rate with its actual measurement times. Middle: one row per variable, a tick whenever it was measured (the process signal). Bottom: model-predicted risk, with the shaded hours marking `SepsisLabel = 1`.
-
-![Patient case with all information](docs/img/3-patient-case-all.png)
-
-**4. Patient case, process only.** The same patient with the physiology inputs replaced by a fixed reference. These are *model-input counterfactuals*, not clinical ones, and the ablated inputs are off-distribution. This patient (`A_to_B:100632`) was chosen from a seeded random sample of nine for visible contrast; in many other patients removing either family flattens the prediction.
-
-![Patient case with physiology removed](docs/img/4-patient-case-process-only.png)
-
-**5. Stress test.** Randomly deleting 0%, 25% and 50% of the target hospital's measurements and rescoring the transferred models.
-
-![Measurement-thinning stress test](docs/img/5-stress-test.png)
 
 ## Dataset
 
@@ -126,6 +105,10 @@ Subset run: 3,000 patients per hospital (A: 116,651 hourly rows, 270 septic pati
 | M_VP | 0.024 [0.021, 0.027] | 0.017 [0.014, 0.020] | 0.017 [0.014, 0.021] | 0.022 [0.019, 0.024] |
 | LR_V | 0.021 [0.019, 0.024] | 0.015 [0.013, 0.017] | 0.018 [0.014, 0.022] | 0.021 [0.019, 0.024] |
 
+The viewer renders the same numbers as one 2x2 grid per model. The diagonal is within-hospital cross-validation; the bold off-diagonal cells are trained on one hospital and tested on the other.
+
+![Transfer matrices in the viewer, one 2x2 grid per model](docs/img/2-transfer.png)
+
 **What the numbers show (and do not show).**
 
 - *Within a hospital, process alone is highly predictive.* `M_P` (0.757 / 0.764 AUROC in A / B) clearly beats `M_BASE` (0.661 / 0.674) and is comparable to `M_V` (0.715 / 0.787); CIs overlap.
@@ -135,6 +118,10 @@ Subset run: 3,000 patients per hospital (A: 116,651 hourly rows, 270 septic pati
 - *Calibration/Brier* differences between models are small and CIs overlap; see `transfer_metrics.json` for reliability bins.
 - *Stress test* (delete 25% / 50% of the target hospital's measurements): all models degrade modestly (e.g. A→B `M_V` 0.677 → 0.647, `M_VP` 0.634 → 0.604, `M_P` 0.592 → 0.564). `M_P` is already near the base-model level, so this does **not** show process models being uniquely fragile. B→A is flat-to-noisy (`M_P` 0.580 → 0.580).
 - *Attribution (PRI).* Where defined (16% of sampled rows A→B, 72% B→A), median PRI is 0.54 / 0.56, i.e. process and physiology contribute comparably under this ablation. In A→B mean contributions are negative: replacing a family with its reference tends to *raise* predicted risk, a sign that the reference inputs are off-distribution. Treat PRI as illustrative only.
+
+The stress-test view plots the transferred models' AUROC as 0%, 25% and 50% of the target hospital's measurements are removed:
+
+![Measurement-thinning stress test, models trained on A and evaluated on B](docs/img/5-stress-test.png)
 
 **Honest summary.** The data support: process features are informative within a hospital but their added value over base features is not detectable after cross-hospital transfer in this subset. They do **not** show that physiology transfers well (it also drops), that the model is "biased", or that process reliance causes the drop. Hospital differences in case mix and labeling are confounded with measurement practice.
 
@@ -170,8 +157,15 @@ Outputs in `results/`: `transfer_metrics.json` (full, with calibration), `transf
 make viewer      # serves the repo root; open http://localhost:8000/viewer/
 ```
 **Deploying to Vercel:** import the repo, set *Framework Preset* to **Other**, leave build command and output directory empty. `vercel.json` redirects `/` to `/viewer/`; the committed `results/*.json` are served as static files (not tested on Vercel from the build environment).
+
 Static HTML/JS, no build step, no backend, no retraining. Views: the question, transfer matrices, patient case
 (All / Physiology only / Process only — *model-input* counterfactuals, not clinical ones), stress test. With no results it shows an empty state; with synthetic results it shows a red banner.
+
+The patient-case view puts the physiology (top), the measurement events (middle) and the model's predicted risk (bottom) on one timeline. Toggling the information source switches between precomputed predictions for the same patient; nothing is scored in the browser. Below, the same patient first with all information, then with the physiology inputs replaced by a fixed reference (*process only*). These are model-input counterfactuals, not clinical ones, and the ablated inputs are off-distribution. This patient (`A_to_B:100632`) was chosen from a seeded random sample of nine for visible contrast; in many other patients removing either family flattens the prediction.
+
+![Patient case with all information](docs/img/3-patient-case-all.png)
+
+![Patient case with the physiology inputs removed (process only)](docs/img/4-patient-case-process-only.png)
 
 ## Limitations
 
