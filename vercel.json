@@ -1,4 +1,6 @@
 {
-  "cleanUrls": false,
-  "redirects": [{ "source": "/", "destination": "/viewer/", "permanent": false }]
+  "framework": null,
+  "installCommand": null,
+  "buildCommand": null,
+  "outputDirectory": "."
 }

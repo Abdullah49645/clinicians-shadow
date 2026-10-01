@@ -156,7 +156,12 @@ Outputs in `results/`: `transfer_metrics.json` (full, with calibration), `transf
 ```bash
 make viewer      # serves the repo root; open http://localhost:8000/viewer/
 ```
-**Deploying to Vercel:** import the repo, set *Framework Preset* to **Other**, leave build command and output directory empty. `vercel.json` redirects `/` to `/viewer/`; the committed `results/*.json` are served as static files (not tested on Vercel from the build environment).
+**Deploying (static, no build step).** The viewer is plain HTML/JS that reads `results/*.json`, so any static host works; the repo root is the site and `index.html` redirects to `/viewer/`.
+
+- *Vercel:* import the repo. `vercel.json` sets `framework: null` so Vercel does not auto-detect a Python app from `pyproject.toml`. If the import screen still shows the **Python** preset, change *Application Preset* to **Other** (build and install commands empty, output directory `.`) and redeploy.
+- *GitHub Pages:* Settings → Pages → *Deploy from a branch* → `main` / `(root)`; the viewer is then served at `https://<user>.github.io/<repo>/viewer/`.
+
+Neither deployment was tested from the build environment.
 
 Static HTML/JS, no build step, no backend, no retraining. Views: the question, transfer matrices, patient case
 (All / Physiology only / Process only — *model-input* counterfactuals, not clinical ones), stress test. With no results it shows an empty state; with synthetic results it shows a red banner.
