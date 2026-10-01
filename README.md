@@ -5,6 +5,8 @@
 > **Built for the Global Innovation Build Challenge V2 (GIBC V2) — Track 02: Applied — Medical Technology & Finance.**
 > **Live demo:** <VERCEL_LINK_HERE> &nbsp;·&nbsp; **Demo video:** <VIDEO_LINK_HERE>
 
+![Clinician's Shadow: the patient case and cross-hospital transfer views](docs/img/banner.png)
+
 **When a clinical model predicts sepsis, is it seeing the patient — or seeing what clinicians chose to measure?**
 
 A research prototype. It is an empirical audit,
@@ -39,6 +41,30 @@ Scenarios: `within_A`, `within_B` (patient-grouped CV), `A_to_B`, `B_to_A`.
 
 Feature provenance is enforced by column prefix (`b__`, `v__`, `p__`) and by signatures: `process_features` receives only the boolean mask;
 `physiology_locf` only values. See `docs/temporal_rules.md`.
+
+## Screenshots
+
+All screenshots are from the included viewer, rendered from the committed `results/*.json` (subset run: 3,000 patients per hospital).
+
+**1. The question.** Physiology (what was happening to the patient) versus process (what clinicians chose to measure).
+
+![The question view](docs/img/1-question.png)
+
+**2. Cross-hospital transfer.** One 2x2 grid per model: the diagonal is within-hospital cross-validation, the bold off-diagonal cells are trained on one hospital and tested on the other. Switch the metric between AUROC, AUPRC and Brier.
+
+![Transfer matrices for each model](docs/img/2-transfer.png)
+
+**3. Patient case, all information.** Top: heart rate with its actual measurement times. Middle: one row per variable, a tick whenever it was measured (the process signal). Bottom: model-predicted risk, with the shaded hours marking `SepsisLabel = 1`.
+
+![Patient case with all information](docs/img/3-patient-case-all.png)
+
+**4. Patient case, process only.** The same patient with the physiology inputs replaced by a fixed reference. These are *model-input counterfactuals*, not clinical ones, and the ablated inputs are off-distribution. This patient (`A_to_B:100632`) was chosen from a seeded random sample of nine for visible contrast; in many other patients removing either family flattens the prediction.
+
+![Patient case with physiology removed](docs/img/4-patient-case-process-only.png)
+
+**5. Stress test.** Randomly deleting 0%, 25% and 50% of the target hospital's measurements and rescoring the transferred models.
+
+![Measurement-thinning stress test](docs/img/5-stress-test.png)
 
 ## Dataset
 
