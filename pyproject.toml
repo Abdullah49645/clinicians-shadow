@@ -1,5 +1,5 @@
 [project]
-name = "patient-or-clinician"
+name = "clinicians-shadow"
 version = "0.1.0"
 description = "Auditing whether a sepsis model sees the patient or the measurement process, under cross-hospital shift."
 requires-python = ">=3.10"

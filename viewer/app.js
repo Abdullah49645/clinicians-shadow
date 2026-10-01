@@ -57,7 +57,9 @@ function X(){if(!S.stress||!Object.keys(S.stress).length)return `<h1>Stress test
   const d=S.stress.A_to_B,ks=Object.keys(d),W=640,H=300;
   const val=(k,m)=>d[k][m].auroc;let s=`<svg viewBox="0 0 ${W} ${H+30}" width="${W}">`;
   const all=ks.flatMap(k=>MODELS.map(m=>val(k,m))).filter(v=>v!=null),lo=Math.min(...all)-.02,hi=Math.max(...all)+.02,Y=v=>H-(H-20)*(v-lo)/(hi-lo),Xp=i=>60+(W-120)*i/(ks.length-1);
-  MODELS.forEach(m=>{s+=`<polyline fill="none" stroke="${COLOR[m]}" stroke-width="2" points="${ks.map((k,i)=>Xp(i)+","+Y(val(k,m))).join(" ")}"/><text x="${W-56}" y="${Y(val(ks.at(-1),m))+4}" style="fill:${COLOR[m]}">${m}</text>`});
+  const last=ks.at(-1),ly={};[...MODELS].sort((a,b)=>Y(val(last,a))-Y(val(last,b))).reduce((pv,m)=>{const y=Math.max(Y(val(last,m)),pv+13);ly[m]=y;return y},-99);
+  MODELS.forEach(m=>{s+=`<polyline fill="none" stroke="${COLOR[m]}" stroke-width="2" points="${ks.map((k,i)=>Xp(i)+","+Y(val(k,m))).join(" ")}"/><text x="${W-56}" y="${ly[m]+4}" style="fill:${COLOR[m]}">${m}</text>`});
+  s+=`<text x="4" y="10">AUROC</text><text x="4" y="${Y(hi)+4}">${hi.toFixed(2)}</text><text x="4" y="${Y(lo)+4}">${lo.toFixed(2)}</text>`;
   ks.forEach((k,i)=>s+=`<text x="${Xp(i)}" y="${H+20}" text-anchor="middle">${Math.round(k*100)}% removed</text>`);
   return `<h1>If the target hospital measured less</h1><p class="mut" style="max-width:38em">Models trained on A, evaluated on B after randomly deleting a fraction of B's measurements. AUROC shown; labels untouched.</p>${s}</svg>`}
 init();

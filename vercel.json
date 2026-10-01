@@ -1,0 +1,4 @@
+{
+  "cleanUrls": false,
+  "redirects": [{ "source": "/", "destination": "/viewer/", "permanent": false }]
+}

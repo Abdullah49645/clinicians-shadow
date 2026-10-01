@@ -1,4 +1,4 @@
-Patient or Clinician?
+Clinician's Shadow
 
 Software license: MIT (see LICENSE). MIT was chosen because every runtime
 dependency (numpy, pandas, scikit-learn: BSD-3-Clause; pytest, dev only: MIT) is

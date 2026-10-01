@@ -1,8 +1,13 @@
-# Patient or Clinician?
+# Clinician's Shadow
+
+*Patient or clinician? Auditing what a sepsis model actually sees.*
+
+> **Built for the Global Innovation Build Challenge V2 (GIBC V2) — Track 02: Applied — Medical Technology & Finance.**
+> **Live demo:** <VERCEL_LINK_HERE> &nbsp;·&nbsp; **Demo video:** <VIDEO_LINK_HERE>
 
 **When a clinical model predicts sepsis, is it seeing the patient — or seeing what clinicians chose to measure?**
 
-A research prototype for *GIBC V2, Track 02 (Applied: Medical Technology & Finance)*. It is an empirical audit,
+A research prototype. It is an empirical audit,
 not a sepsis predictor: we split the information available to a model into **physiology** and **measurement
 process**, train matched models on each, and test which survives transfer between two hospitals.
 
@@ -112,7 +117,7 @@ Subset run: 3,000 patients per hospital (A: 116,651 hourly rows, 270 septic pati
 ## Reproduction
 
 ```bash
-git clone <this repo> && cd patient-or-clinician
+git clone <this repo> && cd clinicians-shadow
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 # place the dataset as described above
@@ -123,11 +128,22 @@ make run                       # full run: 5 folds x 5 models x 2 hospitals + tr
 Outputs in `results/`: `transfer_metrics.json` (full, with calibration), `transfer_matrix.json` (compact), `model_metrics.json`
 (cohort counts, config, versions), `attribution_cases.json`, `stress_test.json`, `audit.json`, `results_table.md`.
 
+## Hackathon submission
+
+| | |
+|---|---|
+| Challenge | Global Innovation Build Challenge V2 (GIBC V2) |
+| Track | Track 02 — Applied: Medical Technology & Finance |
+| Data | PhysioNet/CinC Challenge 2019 (public, de-identified) |
+| Status | Research prototype; not a clinical product |
+| Live demo | <VERCEL_LINK_HERE> |
+
 ## Demo
 
 ```bash
 make viewer      # serves the repo root; open http://localhost:8000/viewer/
 ```
+**Deploying to Vercel:** import the repo, set *Framework Preset* to **Other**, leave build command and output directory empty. `vercel.json` redirects `/` to `/viewer/`; the committed `results/*.json` are served as static files (not tested on Vercel from the build environment).
 Static HTML/JS, no build step, no backend, no retraining. Views: the question, transfer matrices, patient case
 (All / Physiology only / Process only — *model-input* counterfactuals, not clinical ones), stress test. With no results it shows an empty state; with synthetic results it shows a red banner.
 
