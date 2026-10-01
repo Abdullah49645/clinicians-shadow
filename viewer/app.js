@@ -46,11 +46,11 @@ function draw(c){const W=980,pad=46,H=[170,230,170],n=c.hours.length,x=i=>pad+(W
   const vars=Object.keys(c.observed_hours),rh=190/vars.length,oy=H[0]+30;
   s+=`<text x="${pad}" y="${oy-6}" style="fill:var(--proc)">PROCESS — each row is one variable; ticks = a measurement was taken</text>`;
   vars.forEach((k,j)=>c.observed_hours[k].forEach(h=>s+=`<rect x="${hx(h)-1}" y="${oy+j*rh}" width="2" height="${rh*.7}" fill="var(--proc)" opacity=".8"/>`));
-  const py=oy+H[1]+10,ph=130,Y=p=>py+ph*(1-Math.min(1,p)),key={all:"all",physiology_only:"physiology_only",process_only:"process_only"}[mode];
-  s+=`<text x="${pad}" y="${py-4}">MODEL PREDICTION (${({all:"all information",physiology_only:"process removed",process_only:"physiology removed"})[mode]}) · shaded = SepsisLabel=1</text>`;
+  const py=oy+H[1]+10,ph=130,ym=Math.max(0.01,...c.pred.all,...c.pred.physiology_only,...c.pred.process_only),Y=p=>py+ph*(1-Math.min(1,p/ym)),key={all:"all",physiology_only:"physiology_only",process_only:"process_only"}[mode];
+  s+=`<text x="${pad}" y="${py-4}">MODEL PREDICTED RISK, scaled to this patient's max (${({all:"all information",physiology_only:"process removed",process_only:"physiology removed"})[mode]}) · shaded = SepsisLabel=1</text>`;
   c.label.forEach((l,i)=>{if(l)s+=`<rect x="${x(i)-3}" y="${py}" width="6" height="${ph}" fill="var(--lab)" opacity=".13"/>`});
   const line=(arr,col,w,d)=>`<polyline fill="none" stroke="${col}" stroke-width="${w}" ${d?'stroke-dasharray="3 3"':""} points="${arr.map((p,i)=>x(i)+","+Y(p)).join(" ")}"/>`;
-  s+=line(c.pred.all,"var(--both)",1,true)+line(c.pred[key],mode=="process_only"?"var(--proc)":mode=="physiology_only"?"var(--phys)":"var(--both)",2.2)+`<line x1="${pad}" x2="${W-pad}" y1="${py+ph}" y2="${py+ph}" stroke="var(--rule)"/><text x="${W-pad-170}" y="${py-4}">dashed = all-information prediction</text>`;
+  s+=line(c.pred.all,"var(--both)",1,true)+line(c.pred[key],mode=="process_only"?"var(--proc)":mode=="physiology_only"?"var(--phys)":"var(--both)",2.2)+`<text x="4" y="${py+8}">${(ym*100).toFixed(1)}%</text><text x="4" y="${py+ph}">0%</text><line x1="${pad}" x2="${W-pad}" y1="${py+ph}" y2="${py+ph}" stroke="var(--rule)"/><text x="${W-pad-170}" y="${py-4}">dashed = all-information prediction</text>`;
   const pr=c.pri.filter(p=>p!=null);s+=`</svg><p class="mut sans" style="font-size:12px">Hours with a defined Process Reliance Index: ${pr.length}/${n}${pr.length?` · median ${f3(pr.sort((a,b)=>a-b)[pr.length>>1])}`:""} (model-based, associational).</p>`;
   $("#cv").innerHTML=s}
 function X(){if(!S.stress||!Object.keys(S.stress).length)return `<h1>Stress test</h1><div class="empty">Measurement-thinning results are not available. Run the pipeline without <code>--no-stress</code>.</div>`;
