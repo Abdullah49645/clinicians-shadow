@@ -27,7 +27,7 @@ function T(){if(!S.matrix)return empty();
   <div class="grid">${MODELS.map(m=>`<div><div class="k" style="color:${COLOR[m]}">${LABEL[m]}</div><table class="m"><tr><th></th><th>test A</th><th>test B</th></tr>
   <tr><th>train A</th><td>${cell(m,"within_A")}</td><td class="x">${cell(m,"A_to_B")}<span><br>${delta(m,"A_to_B","within_B")}</span></td></tr>
   <tr><th>train B</th><td class="x">${cell(m,"B_to_A")}<span><br>${delta(m,"B_to_A","within_A")}</span></td><td>${cell(m,"within_B")}</td></tr></table></div>`).join("")}</div>
-  ${S.audit?`<p class="mut sans" style="font-size:12px;margin-top:36px">Leak audit — AUROC of predicting “${S.audit.A.variable} measured now” from physiology features alone: A ${f3(S.audit.A.auroc)}, B ${f3(S.audit.B.auroc)} (0.5 = no timing information recovered).</p>`:""}`}
+  ${S.audit?`<p class="mut sans" style="font-size:12px;margin-top:36px">Leak audit — AUROC of predicting “${S.audit.A.variable} measured now” from physiology features alone: A ${f3(S.audit.A.auroc)}, B ${f3(S.audit.B.auroc)} (0.5 would mean none; physiology values are therefore not fully process-free — part of this may be genuine illness severity).</p>`:""}`}
 let ci=0,mode="all",dir="A_to_B";
 function C(){if(!S.cases)return empty();
   const cs=S.cases.cases.filter(c=>c.id.startsWith(dir)), c=cs[Math.min(ci,cs.length-1)];
