@@ -1,0 +1,65 @@
+{
+ "synthetic": false,
+ "config": {
+  "seed": 42,
+  "n_splits": 5,
+  "n_boot": 100,
+  "hours_cap": 72,
+  "window": 6,
+  "thin_levels": [
+   0.0,
+   0.25,
+   0.5
+  ],
+  "n_case_septic": 6,
+  "n_case_control": 3,
+  "hgb_max_iter": 200,
+  "hgb_lr": 0.1,
+  "hgb_leaf_nodes": 31,
+  "hgb_l2": 1.0,
+  "run_stress": true
+ },
+ "versions": {
+  "python": "3.12.3",
+  "sklearn": "1.8.0",
+  "pandas": "3.0.2",
+  "numpy": "2.4.4"
+ },
+ "cohorts": {
+  "A": {
+   "patients": 3000,
+   "rows": 116651,
+   "row_prevalence": 0.022169,
+   "septic_patients": 270
+  },
+  "B": {
+   "patients": 3000,
+   "rows": 113642,
+   "row_prevalence": 0.014554,
+   "septic_patients": 177
+  }
+ },
+ "feature_counts": {
+  "base": 4,
+  "physiology": 34,
+  "process": 111
+ },
+ "model_families": {
+  "M_BASE": [
+   "base"
+  ],
+  "M_V": [
+   "base",
+   "physiology"
+  ],
+  "M_P": [
+   "base",
+   "process"
+  ],
+  "M_VP": [
+   "base",
+   "physiology",
+   "process"
+  ]
+ }
+}

@@ -1,0 +1,12 @@
+{
+ "A": {
+  "variable": "Lactate",
+  "auroc": 0.714657,
+  "note": "AUROC of predicting 'variable measured at this hour' from physiology features only"
+ },
+ "B": {
+  "variable": "Lactate",
+  "auroc": 0.912963,
+  "note": "AUROC of predicting 'variable measured at this hour' from physiology features only"
+ }
+}

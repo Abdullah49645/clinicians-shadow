@@ -8,8 +8,6 @@ __pycache__/
 node_modules/
 data/*
 !data/.gitkeep
-results/*
-!results/.gitkeep
 *.psv
 *.pkl
 *.joblib

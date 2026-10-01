@@ -1,0 +1,2076 @@
+{
+ "A_to_B": {
+  "0.0": {
+   "M_BASE": {
+    "auroc": 0.599245,
+    "auprc": 0.03649,
+    "brier": 0.020872,
+    "ece": 0.017949,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 107759,
+      "mean_pred": 0.008986,
+      "frac_pos": 0.012055
+     },
+     {
+      "bin": 1,
+      "n": 1993,
+      "mean_pred": 0.14362,
+      "frac_pos": 0.042649
+     },
+     {
+      "bin": 2,
+      "n": 1012,
+      "mean_pred": 0.2389,
+      "frac_pos": 0.06917
+     },
+     {
+      "bin": 3,
+      "n": 875,
+      "mean_pred": 0.345638,
+      "frac_pos": 0.04
+     },
+     {
+      "bin": 4,
+      "n": 568,
+      "mean_pred": 0.446697,
+      "frac_pos": 0.052817
+     },
+     {
+      "bin": 5,
+      "n": 551,
+      "mean_pred": 0.55261,
+      "frac_pos": 0.101633
+     },
+     {
+      "bin": 6,
+      "n": 242,
+      "mean_pred": 0.6461,
+      "frac_pos": 0.086777
+     },
+     {
+      "bin": 7,
+      "n": 295,
+      "mean_pred": 0.734141,
+      "frac_pos": 0.054237
+     },
+     {
+      "bin": 8,
+      "n": 293,
+      "mean_pred": 0.853617,
+      "frac_pos": 0.109215
+     },
+     {
+      "bin": 9,
+      "n": 54,
+      "mean_pred": 0.970521,
+      "frac_pos": 0.185185
+     }
+    ]
+   },
+   "M_V": {
+    "auroc": 0.67702,
+    "auprc": 0.054218,
+    "brier": 0.016403,
+    "ece": 0.013317,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110740,
+      "mean_pred": 0.005029,
+      "frac_pos": 0.012642
+     },
+     {
+      "bin": 1,
+      "n": 1234,
+      "mean_pred": 0.139201,
+      "frac_pos": 0.088331
+     },
+     {
+      "bin": 2,
+      "n": 472,
+      "mean_pred": 0.249232,
+      "frac_pos": 0.063559
+     },
+     {
+      "bin": 3,
+      "n": 350,
+      "mean_pred": 0.347101,
+      "frac_pos": 0.034286
+     },
+     {
+      "bin": 4,
+      "n": 227,
+      "mean_pred": 0.440645,
+      "frac_pos": 0.057269
+     },
+     {
+      "bin": 5,
+      "n": 152,
+      "mean_pred": 0.551167,
+      "frac_pos": 0.085526
+     },
+     {
+      "bin": 6,
+      "n": 265,
+      "mean_pred": 0.651733,
+      "frac_pos": 0.120755
+     },
+     {
+      "bin": 7,
+      "n": 138,
+      "mean_pred": 0.740766,
+      "frac_pos": 0.231884
+     },
+     {
+      "bin": 8,
+      "n": 60,
+      "mean_pred": 0.840863,
+      "frac_pos": 0.15
+     },
+     {
+      "bin": 9,
+      "n": 4,
+      "mean_pred": 0.944146,
+      "frac_pos": 1.0
+     }
+    ]
+   },
+   "M_P": {
+    "auroc": 0.591853,
+    "auprc": 0.032398,
+    "brier": 0.018191,
+    "ece": 0.016312,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110684,
+      "mean_pred": 0.004767,
+      "frac_pos": 0.013353
+     },
+     {
+      "bin": 1,
+      "n": 1121,
+      "mean_pred": 0.142098,
+      "frac_pos": 0.042819
+     },
+     {
+      "bin": 2,
+      "n": 537,
+      "mean_pred": 0.244649,
+      "frac_pos": 0.03352
+     },
+     {
+      "bin": 3,
+      "n": 322,
+      "mean_pred": 0.346815,
+      "frac_pos": 0.046584
+     },
+     {
+      "bin": 4,
+      "n": 230,
+      "mean_pred": 0.448278,
+      "frac_pos": 0.069565
+     },
+     {
+      "bin": 5,
+      "n": 174,
+      "mean_pred": 0.54725,
+      "frac_pos": 0.022989
+     },
+     {
+      "bin": 6,
+      "n": 110,
+      "mean_pred": 0.651608,
+      "frac_pos": 0.163636
+     },
+     {
+      "bin": 7,
+      "n": 120,
+      "mean_pred": 0.745303,
+      "frac_pos": 0.083333
+     },
+     {
+      "bin": 8,
+      "n": 121,
+      "mean_pred": 0.850842,
+      "frac_pos": 0.066116
+     },
+     {
+      "bin": 9,
+      "n": 223,
+      "mean_pred": 0.962546,
+      "frac_pos": 0.174888
+     }
+    ]
+   },
+   "M_VP": {
+    "auroc": 0.6336,
+    "auprc": 0.045346,
+    "brier": 0.017372,
+    "ece": 0.015439,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 111544,
+      "mean_pred": 0.002851,
+      "frac_pos": 0.012955
+     },
+     {
+      "bin": 1,
+      "n": 784,
+      "mean_pred": 0.139631,
+      "frac_pos": 0.098214
+     },
+     {
+      "bin": 2,
+      "n": 320,
+      "mean_pred": 0.244754,
+      "frac_pos": 0.084375
+     },
+     {
+      "bin": 3,
+      "n": 206,
+      "mean_pred": 0.346444,
+      "frac_pos": 0.135922
+     },
+     {
+      "bin": 4,
+      "n": 144,
+      "mean_pred": 0.44739,
+      "frac_pos": 0.069444
+     },
+     {
+      "bin": 5,
+      "n": 124,
+      "mean_pred": 0.547748,
+      "frac_pos": 0.072581
+     },
+     {
+      "bin": 6,
+      "n": 96,
+      "mean_pred": 0.652112,
+      "frac_pos": 0.020833
+     },
+     {
+      "bin": 7,
+      "n": 85,
+      "mean_pred": 0.741923,
+      "frac_pos": 0.082353
+     },
+     {
+      "bin": 8,
+      "n": 74,
+      "mean_pred": 0.859523,
+      "frac_pos": 0.108108
+     },
+     {
+      "bin": 9,
+      "n": 265,
+      "mean_pred": 0.964949,
+      "frac_pos": 0.154717
+     }
+    ]
+   },
+   "LR_V": {
+    "auroc": 0.709592,
+    "auprc": 0.042946,
+    "brier": 0.01786,
+    "ece": 0.013284,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110119,
+      "mean_pred": 0.019112,
+      "frac_pos": 0.012813
+     },
+     {
+      "bin": 1,
+      "n": 1884,
+      "mean_pred": 0.135249,
+      "frac_pos": 0.065287
+     },
+     {
+      "bin": 2,
+      "n": 527,
+      "mean_pred": 0.247492,
+      "frac_pos": 0.064516
+     },
+     {
+      "bin": 3,
+      "n": 317,
+      "mean_pred": 0.345955,
+      "frac_pos": 0.088328
+     },
+     {
+      "bin": 4,
+      "n": 188,
+      "mean_pred": 0.445901,
+      "frac_pos": 0.106383
+     },
+     {
+      "bin": 5,
+      "n": 122,
+      "mean_pred": 0.547541,
+      "frac_pos": 0.057377
+     },
+     {
+      "bin": 6,
+      "n": 115,
+      "mean_pred": 0.640733,
+      "frac_pos": 0.104348
+     },
+     {
+      "bin": 7,
+      "n": 78,
+      "mean_pred": 0.749652,
+      "frac_pos": 0.102564
+     },
+     {
+      "bin": 8,
+      "n": 43,
+      "mean_pred": 0.846827,
+      "frac_pos": 0.023256
+     },
+     {
+      "bin": 9,
+      "n": 249,
+      "mean_pred": 0.983848,
+      "frac_pos": 0.040161
+     }
+    ]
+   }
+  },
+  "0.25": {
+   "M_BASE": {
+    "auroc": 0.599245,
+    "auprc": 0.03649,
+    "brier": 0.020872,
+    "ece": 0.017949,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 107759,
+      "mean_pred": 0.008986,
+      "frac_pos": 0.012055
+     },
+     {
+      "bin": 1,
+      "n": 1993,
+      "mean_pred": 0.14362,
+      "frac_pos": 0.042649
+     },
+     {
+      "bin": 2,
+      "n": 1012,
+      "mean_pred": 0.2389,
+      "frac_pos": 0.06917
+     },
+     {
+      "bin": 3,
+      "n": 875,
+      "mean_pred": 0.345638,
+      "frac_pos": 0.04
+     },
+     {
+      "bin": 4,
+      "n": 568,
+      "mean_pred": 0.446697,
+      "frac_pos": 0.052817
+     },
+     {
+      "bin": 5,
+      "n": 551,
+      "mean_pred": 0.55261,
+      "frac_pos": 0.101633
+     },
+     {
+      "bin": 6,
+      "n": 242,
+      "mean_pred": 0.6461,
+      "frac_pos": 0.086777
+     },
+     {
+      "bin": 7,
+      "n": 295,
+      "mean_pred": 0.734141,
+      "frac_pos": 0.054237
+     },
+     {
+      "bin": 8,
+      "n": 293,
+      "mean_pred": 0.853617,
+      "frac_pos": 0.109215
+     },
+     {
+      "bin": 9,
+      "n": 54,
+      "mean_pred": 0.970521,
+      "frac_pos": 0.185185
+     }
+    ]
+   },
+   "M_V": {
+    "auroc": 0.661846,
+    "auprc": 0.050233,
+    "brier": 0.016517,
+    "ece": 0.013882,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110694,
+      "mean_pred": 0.005057,
+      "frac_pos": 0.012828
+     },
+     {
+      "bin": 1,
+      "n": 1130,
+      "mean_pred": 0.140796,
+      "frac_pos": 0.079646
+     },
+     {
+      "bin": 2,
+      "n": 577,
+      "mean_pred": 0.249771,
+      "frac_pos": 0.043328
+     },
+     {
+      "bin": 3,
+      "n": 383,
+      "mean_pred": 0.343415,
+      "frac_pos": 0.023499
+     },
+     {
+      "bin": 4,
+      "n": 228,
+      "mean_pred": 0.442906,
+      "frac_pos": 0.087719
+     },
+     {
+      "bin": 5,
+      "n": 207,
+      "mean_pred": 0.551994,
+      "frac_pos": 0.130435
+     },
+     {
+      "bin": 6,
+      "n": 215,
+      "mean_pred": 0.645579,
+      "frac_pos": 0.134884
+     },
+     {
+      "bin": 7,
+      "n": 133,
+      "mean_pred": 0.74836,
+      "frac_pos": 0.165414
+     },
+     {
+      "bin": 8,
+      "n": 72,
+      "mean_pred": 0.831607,
+      "frac_pos": 0.125
+     },
+     {
+      "bin": 9,
+      "n": 3,
+      "mean_pred": 0.965671,
+      "frac_pos": 1.0
+     }
+    ]
+   },
+   "M_P": {
+    "auroc": 0.573359,
+    "auprc": 0.033899,
+    "brier": 0.017769,
+    "ece": 0.014836,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110633,
+      "mean_pred": 0.005276,
+      "frac_pos": 0.012862
+     },
+     {
+      "bin": 1,
+      "n": 1136,
+      "mean_pred": 0.141199,
+      "frac_pos": 0.064261
+     },
+     {
+      "bin": 2,
+      "n": 492,
+      "mean_pred": 0.246707,
+      "frac_pos": 0.071138
+     },
+     {
+      "bin": 3,
+      "n": 354,
+      "mean_pred": 0.347076,
+      "frac_pos": 0.064972
+     },
+     {
+      "bin": 4,
+      "n": 213,
+      "mean_pred": 0.447597,
+      "frac_pos": 0.065728
+     },
+     {
+      "bin": 5,
+      "n": 208,
+      "mean_pred": 0.552077,
+      "frac_pos": 0.096154
+     },
+     {
+      "bin": 6,
+      "n": 185,
+      "mean_pred": 0.645784,
+      "frac_pos": 0.091892
+     },
+     {
+      "bin": 7,
+      "n": 190,
+      "mean_pred": 0.749805,
+      "frac_pos": 0.126316
+     },
+     {
+      "bin": 8,
+      "n": 166,
+      "mean_pred": 0.843425,
+      "frac_pos": 0.120482
+     },
+     {
+      "bin": 9,
+      "n": 65,
+      "mean_pred": 0.935887,
+      "frac_pos": 0.076923
+     }
+    ]
+   },
+   "M_VP": {
+    "auroc": 0.61657,
+    "auprc": 0.049239,
+    "brier": 0.01627,
+    "ece": 0.013449,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 111389,
+      "mean_pred": 0.003142,
+      "frac_pos": 0.012353
+     },
+     {
+      "bin": 1,
+      "n": 861,
+      "mean_pred": 0.141803,
+      "frac_pos": 0.073171
+     },
+     {
+      "bin": 2,
+      "n": 445,
+      "mean_pred": 0.24658,
+      "frac_pos": 0.179775
+     },
+     {
+      "bin": 3,
+      "n": 249,
+      "mean_pred": 0.344051,
+      "frac_pos": 0.156627
+     },
+     {
+      "bin": 4,
+      "n": 170,
+      "mean_pred": 0.444477,
+      "frac_pos": 0.170588
+     },
+     {
+      "bin": 5,
+      "n": 165,
+      "mean_pred": 0.545067,
+      "frac_pos": 0.218182
+     },
+     {
+      "bin": 6,
+      "n": 64,
+      "mean_pred": 0.646983,
+      "frac_pos": 0.125
+     },
+     {
+      "bin": 7,
+      "n": 65,
+      "mean_pred": 0.75153,
+      "frac_pos": 0.061538
+     },
+     {
+      "bin": 8,
+      "n": 148,
+      "mean_pred": 0.856272,
+      "frac_pos": 0.054054
+     },
+     {
+      "bin": 9,
+      "n": 86,
+      "mean_pred": 0.935179,
+      "frac_pos": 0.127907
+     }
+    ]
+   },
+   "LR_V": {
+    "auroc": 0.690587,
+    "auprc": 0.03817,
+    "brier": 0.017945,
+    "ece": 0.013463,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 109902,
+      "mean_pred": 0.019236,
+      "frac_pos": 0.013166
+     },
+     {
+      "bin": 1,
+      "n": 2146,
+      "mean_pred": 0.133756,
+      "frac_pos": 0.045666
+     },
+     {
+      "bin": 2,
+      "n": 526,
+      "mean_pred": 0.247365,
+      "frac_pos": 0.068441
+     },
+     {
+      "bin": 3,
+      "n": 295,
+      "mean_pred": 0.350236,
+      "frac_pos": 0.061017
+     },
+     {
+      "bin": 4,
+      "n": 179,
+      "mean_pred": 0.448765,
+      "frac_pos": 0.117318
+     },
+     {
+      "bin": 5,
+      "n": 150,
+      "mean_pred": 0.548441,
+      "frac_pos": 0.046667
+     },
+     {
+      "bin": 6,
+      "n": 84,
+      "mean_pred": 0.650343,
+      "frac_pos": 0.119048
+     },
+     {
+      "bin": 7,
+      "n": 66,
+      "mean_pred": 0.741782,
+      "frac_pos": 0.060606
+     },
+     {
+      "bin": 8,
+      "n": 40,
+      "mean_pred": 0.845632,
+      "frac_pos": 0.075
+     },
+     {
+      "bin": 9,
+      "n": 254,
+      "mean_pred": 0.982148,
+      "frac_pos": 0.03937
+     }
+    ]
+   }
+  },
+  "0.5": {
+   "M_BASE": {
+    "auroc": 0.599245,
+    "auprc": 0.03649,
+    "brier": 0.020872,
+    "ece": 0.017949,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 107759,
+      "mean_pred": 0.008986,
+      "frac_pos": 0.012055
+     },
+     {
+      "bin": 1,
+      "n": 1993,
+      "mean_pred": 0.14362,
+      "frac_pos": 0.042649
+     },
+     {
+      "bin": 2,
+      "n": 1012,
+      "mean_pred": 0.2389,
+      "frac_pos": 0.06917
+     },
+     {
+      "bin": 3,
+      "n": 875,
+      "mean_pred": 0.345638,
+      "frac_pos": 0.04
+     },
+     {
+      "bin": 4,
+      "n": 568,
+      "mean_pred": 0.446697,
+      "frac_pos": 0.052817
+     },
+     {
+      "bin": 5,
+      "n": 551,
+      "mean_pred": 0.55261,
+      "frac_pos": 0.101633
+     },
+     {
+      "bin": 6,
+      "n": 242,
+      "mean_pred": 0.6461,
+      "frac_pos": 0.086777
+     },
+     {
+      "bin": 7,
+      "n": 295,
+      "mean_pred": 0.734141,
+      "frac_pos": 0.054237
+     },
+     {
+      "bin": 8,
+      "n": 293,
+      "mean_pred": 0.853617,
+      "frac_pos": 0.109215
+     },
+     {
+      "bin": 9,
+      "n": 54,
+      "mean_pred": 0.970521,
+      "frac_pos": 0.185185
+     }
+    ]
+   },
+   "M_V": {
+    "auroc": 0.647406,
+    "auprc": 0.046286,
+    "brier": 0.016791,
+    "ece": 0.014233,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110645,
+      "mean_pred": 0.005003,
+      "frac_pos": 0.012689
+     },
+     {
+      "bin": 1,
+      "n": 1049,
+      "mean_pred": 0.144017,
+      "frac_pos": 0.07817
+     },
+     {
+      "bin": 2,
+      "n": 544,
+      "mean_pred": 0.247865,
+      "frac_pos": 0.055147
+     },
+     {
+      "bin": 3,
+      "n": 442,
+      "mean_pred": 0.350388,
+      "frac_pos": 0.047511
+     },
+     {
+      "bin": 4,
+      "n": 279,
+      "mean_pred": 0.444403,
+      "frac_pos": 0.082437
+     },
+     {
+      "bin": 5,
+      "n": 221,
+      "mean_pred": 0.552358,
+      "frac_pos": 0.113122
+     },
+     {
+      "bin": 6,
+      "n": 215,
+      "mean_pred": 0.646519,
+      "frac_pos": 0.237209
+     },
+     {
+      "bin": 7,
+      "n": 174,
+      "mean_pred": 0.751207,
+      "frac_pos": 0.074713
+     },
+     {
+      "bin": 8,
+      "n": 73,
+      "mean_pred": 0.828153,
+      "frac_pos": 0.068493
+     }
+    ]
+   },
+   "M_P": {
+    "auroc": 0.563661,
+    "auprc": 0.031065,
+    "brier": 0.017734,
+    "ece": 0.01449,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 110500,
+      "mean_pred": 0.005692,
+      "frac_pos": 0.013014
+     },
+     {
+      "bin": 1,
+      "n": 1324,
+      "mean_pred": 0.13968,
+      "frac_pos": 0.056647
+     },
+     {
+      "bin": 2,
+      "n": 519,
+      "mean_pred": 0.243338,
+      "frac_pos": 0.069364
+     },
+     {
+      "bin": 3,
+      "n": 284,
+      "mean_pred": 0.348075,
+      "frac_pos": 0.098592
+     },
+     {
+      "bin": 4,
+      "n": 276,
+      "mean_pred": 0.449415,
+      "frac_pos": 0.07971
+     },
+     {
+      "bin": 5,
+      "n": 232,
+      "mean_pred": 0.544009,
+      "frac_pos": 0.056034
+     },
+     {
+      "bin": 6,
+      "n": 162,
+      "mean_pred": 0.650089,
+      "frac_pos": 0.08642
+     },
+     {
+      "bin": 7,
+      "n": 130,
+      "mean_pred": 0.750386,
+      "frac_pos": 0.053846
+     },
+     {
+      "bin": 8,
+      "n": 115,
+      "mean_pred": 0.849157,
+      "frac_pos": 0.130435
+     },
+     {
+      "bin": 9,
+      "n": 100,
+      "mean_pred": 0.927982,
+      "frac_pos": 0.06
+     }
+    ]
+   },
+   "M_VP": {
+    "auroc": 0.604049,
+    "auprc": 0.042868,
+    "brier": 0.016334,
+    "ece": 0.013516,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 111517,
+      "mean_pred": 0.003406,
+      "frac_pos": 0.012716
+     },
+     {
+      "bin": 1,
+      "n": 797,
+      "mean_pred": 0.142089,
+      "frac_pos": 0.116688
+     },
+     {
+      "bin": 2,
+      "n": 406,
+      "mean_pred": 0.245912,
+      "frac_pos": 0.12069
+     },
+     {
+      "bin": 3,
+      "n": 255,
+      "mean_pred": 0.344377,
+      "frac_pos": 0.082353
+     },
+     {
+      "bin": 4,
+      "n": 146,
+      "mean_pred": 0.443761,
+      "frac_pos": 0.136986
+     },
+     {
+      "bin": 5,
+      "n": 126,
+      "mean_pred": 0.550327,
+      "frac_pos": 0.190476
+     },
+     {
+      "bin": 6,
+      "n": 138,
+      "mean_pred": 0.650342,
+      "frac_pos": 0.07971
+     },
+     {
+      "bin": 7,
+      "n": 116,
+      "mean_pred": 0.747225,
+      "frac_pos": 0.060345
+     },
+     {
+      "bin": 8,
+      "n": 98,
+      "mean_pred": 0.842552,
+      "frac_pos": 0.05102
+     },
+     {
+      "bin": 9,
+      "n": 43,
+      "mean_pred": 0.926597,
+      "frac_pos": 0.139535
+     }
+    ]
+   },
+   "LR_V": {
+    "auroc": 0.672953,
+    "auprc": 0.037611,
+    "brier": 0.018009,
+    "ece": 0.013391,
+    "ci95": null,
+    "n_rows": 113642,
+    "n_patients": 3000,
+    "row_prevalence": 0.014554,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 109969,
+      "mean_pred": 0.019244,
+      "frac_pos": 0.012749
+     },
+     {
+      "bin": 1,
+      "n": 2056,
+      "mean_pred": 0.134465,
+      "frac_pos": 0.068093
+     },
+     {
+      "bin": 2,
+      "n": 586,
+      "mean_pred": 0.247974,
+      "frac_pos": 0.09215
+     },
+     {
+      "bin": 3,
+      "n": 291,
+      "mean_pred": 0.348849,
+      "frac_pos": 0.079038
+     },
+     {
+      "bin": 4,
+      "n": 176,
+      "mean_pred": 0.444727,
+      "frac_pos": 0.085227
+     },
+     {
+      "bin": 5,
+      "n": 95,
+      "mean_pred": 0.54291,
+      "frac_pos": 0.010526
+     },
+     {
+      "bin": 6,
+      "n": 81,
+      "mean_pred": 0.656101,
+      "frac_pos": 0.074074
+     },
+     {
+      "bin": 7,
+      "n": 87,
+      "mean_pred": 0.747799,
+      "frac_pos": 0.034483
+     },
+     {
+      "bin": 8,
+      "n": 57,
+      "mean_pred": 0.847845,
+      "frac_pos": 0.017544
+     },
+     {
+      "bin": 9,
+      "n": 244,
+      "mean_pred": 0.982799,
+      "frac_pos": 0.036885
+     }
+    ]
+   }
+  }
+ },
+ "B_to_A": {
+  "0.0": {
+   "M_BASE": {
+    "auroc": 0.597531,
+    "auprc": 0.045573,
+    "brier": 0.027861,
+    "ece": 0.025438,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 109901,
+      "mean_pred": 0.009114,
+      "frac_pos": 0.019781
+     },
+     {
+      "bin": 1,
+      "n": 2765,
+      "mean_pred": 0.138407,
+      "frac_pos": 0.029656
+     },
+     {
+      "bin": 2,
+      "n": 1207,
+      "mean_pred": 0.248607,
+      "frac_pos": 0.036454
+     },
+     {
+      "bin": 3,
+      "n": 781,
+      "mean_pred": 0.349834,
+      "frac_pos": 0.116517
+     },
+     {
+      "bin": 4,
+      "n": 444,
+      "mean_pred": 0.446917,
+      "frac_pos": 0.058559
+     },
+     {
+      "bin": 5,
+      "n": 526,
+      "mean_pred": 0.544715,
+      "frac_pos": 0.08365
+     },
+     {
+      "bin": 6,
+      "n": 424,
+      "mean_pred": 0.651311,
+      "frac_pos": 0.084906
+     },
+     {
+      "bin": 7,
+      "n": 312,
+      "mean_pred": 0.757185,
+      "frac_pos": 0.125
+     },
+     {
+      "bin": 8,
+      "n": 239,
+      "mean_pred": 0.856547,
+      "frac_pos": 0.154812
+     },
+     {
+      "bin": 9,
+      "n": 52,
+      "mean_pred": 0.941991,
+      "frac_pos": 0.25
+     }
+    ]
+   },
+   "M_V": {
+    "auroc": 0.662376,
+    "auprc": 0.069684,
+    "brier": 0.022545,
+    "ece": 0.018314,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 114059,
+      "mean_pred": 0.004397,
+      "frac_pos": 0.019621
+     },
+     {
+      "bin": 1,
+      "n": 1117,
+      "mean_pred": 0.140885,
+      "frac_pos": 0.12265
+     },
+     {
+      "bin": 2,
+      "n": 547,
+      "mean_pred": 0.246499,
+      "frac_pos": 0.11883
+     },
+     {
+      "bin": 3,
+      "n": 365,
+      "mean_pred": 0.3436,
+      "frac_pos": 0.142466
+     },
+     {
+      "bin": 4,
+      "n": 217,
+      "mean_pred": 0.446261,
+      "frac_pos": 0.096774
+     },
+     {
+      "bin": 5,
+      "n": 135,
+      "mean_pred": 0.546659,
+      "frac_pos": 0.140741
+     },
+     {
+      "bin": 6,
+      "n": 86,
+      "mean_pred": 0.647891,
+      "frac_pos": 0.186047
+     },
+     {
+      "bin": 7,
+      "n": 47,
+      "mean_pred": 0.748525,
+      "frac_pos": 0.170213
+     },
+     {
+      "bin": 8,
+      "n": 55,
+      "mean_pred": 0.856828,
+      "frac_pos": 0.381818
+     },
+     {
+      "bin": 9,
+      "n": 23,
+      "mean_pred": 0.939643,
+      "frac_pos": 0.391304
+     }
+    ]
+   },
+   "M_P": {
+    "auroc": 0.579898,
+    "auprc": 0.036993,
+    "brier": 0.022071,
+    "ece": 0.016042,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115092,
+      "mean_pred": 0.006442,
+      "frac_pos": 0.021305
+     },
+     {
+      "bin": 1,
+      "n": 1084,
+      "mean_pred": 0.136916,
+      "frac_pos": 0.073801
+     },
+     {
+      "bin": 2,
+      "n": 290,
+      "mean_pred": 0.242147,
+      "frac_pos": 0.096552
+     },
+     {
+      "bin": 3,
+      "n": 106,
+      "mean_pred": 0.343668,
+      "frac_pos": 0.141509
+     },
+     {
+      "bin": 4,
+      "n": 44,
+      "mean_pred": 0.442531,
+      "frac_pos": 0.045455
+     },
+     {
+      "bin": 5,
+      "n": 24,
+      "mean_pred": 0.544351,
+      "frac_pos": 0.208333
+     },
+     {
+      "bin": 6,
+      "n": 9,
+      "mean_pred": 0.643625,
+      "frac_pos": 0.444444
+     },
+     {
+      "bin": 7,
+      "n": 2,
+      "mean_pred": 0.710687,
+      "frac_pos": 0.0
+     }
+    ]
+   },
+   "M_VP": {
+    "auroc": 0.660739,
+    "auprc": 0.05572,
+    "brier": 0.022029,
+    "ece": 0.018342,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115169,
+      "mean_pred": 0.003853,
+      "frac_pos": 0.020943
+     },
+     {
+      "bin": 1,
+      "n": 886,
+      "mean_pred": 0.14148,
+      "frac_pos": 0.091422
+     },
+     {
+      "bin": 2,
+      "n": 282,
+      "mean_pred": 0.241,
+      "frac_pos": 0.099291
+     },
+     {
+      "bin": 3,
+      "n": 138,
+      "mean_pred": 0.345829,
+      "frac_pos": 0.217391
+     },
+     {
+      "bin": 4,
+      "n": 67,
+      "mean_pred": 0.451386,
+      "frac_pos": 0.149254
+     },
+     {
+      "bin": 5,
+      "n": 43,
+      "mean_pred": 0.545454,
+      "frac_pos": 0.093023
+     },
+     {
+      "bin": 6,
+      "n": 24,
+      "mean_pred": 0.643231,
+      "frac_pos": 0.208333
+     },
+     {
+      "bin": 7,
+      "n": 14,
+      "mean_pred": 0.752787,
+      "frac_pos": 0.142857
+     },
+     {
+      "bin": 8,
+      "n": 19,
+      "mean_pred": 0.859507,
+      "frac_pos": 0.473684
+     },
+     {
+      "bin": 9,
+      "n": 9,
+      "mean_pred": 0.926959,
+      "frac_pos": 0.555556
+     }
+    ]
+   },
+   "LR_V": {
+    "auroc": 0.65268,
+    "auprc": 0.063817,
+    "brier": 0.021376,
+    "ece": 0.007805,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115919,
+      "mean_pred": 0.01352,
+      "frac_pos": 0.021135
+     },
+     {
+      "bin": 1,
+      "n": 607,
+      "mean_pred": 0.139738,
+      "frac_pos": 0.176277
+     },
+     {
+      "bin": 2,
+      "n": 116,
+      "mean_pred": 0.231025,
+      "frac_pos": 0.206897
+     },
+     {
+      "bin": 3,
+      "n": 5,
+      "mean_pred": 0.323825,
+      "frac_pos": 0.2
+     },
+     {
+      "bin": 4,
+      "n": 3,
+      "mean_pred": 0.467227,
+      "frac_pos": 1.0
+     },
+     {
+      "bin": 5,
+      "n": 1,
+      "mean_pred": 0.519399,
+      "frac_pos": 1.0
+     }
+    ]
+   }
+  },
+  "0.25": {
+   "M_BASE": {
+    "auroc": 0.597531,
+    "auprc": 0.045573,
+    "brier": 0.027861,
+    "ece": 0.025438,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 109901,
+      "mean_pred": 0.009114,
+      "frac_pos": 0.019781
+     },
+     {
+      "bin": 1,
+      "n": 2765,
+      "mean_pred": 0.138407,
+      "frac_pos": 0.029656
+     },
+     {
+      "bin": 2,
+      "n": 1207,
+      "mean_pred": 0.248607,
+      "frac_pos": 0.036454
+     },
+     {
+      "bin": 3,
+      "n": 781,
+      "mean_pred": 0.349834,
+      "frac_pos": 0.116517
+     },
+     {
+      "bin": 4,
+      "n": 444,
+      "mean_pred": 0.446917,
+      "frac_pos": 0.058559
+     },
+     {
+      "bin": 5,
+      "n": 526,
+      "mean_pred": 0.544715,
+      "frac_pos": 0.08365
+     },
+     {
+      "bin": 6,
+      "n": 424,
+      "mean_pred": 0.651311,
+      "frac_pos": 0.084906
+     },
+     {
+      "bin": 7,
+      "n": 312,
+      "mean_pred": 0.757185,
+      "frac_pos": 0.125
+     },
+     {
+      "bin": 8,
+      "n": 239,
+      "mean_pred": 0.856547,
+      "frac_pos": 0.154812
+     },
+     {
+      "bin": 9,
+      "n": 52,
+      "mean_pred": 0.941991,
+      "frac_pos": 0.25
+     }
+    ]
+   },
+   "M_V": {
+    "auroc": 0.664195,
+    "auprc": 0.070188,
+    "brier": 0.022484,
+    "ece": 0.01851,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 113965,
+      "mean_pred": 0.004388,
+      "frac_pos": 0.019743
+     },
+     {
+      "bin": 1,
+      "n": 1305,
+      "mean_pred": 0.144651,
+      "frac_pos": 0.099617
+     },
+     {
+      "bin": 2,
+      "n": 511,
+      "mean_pred": 0.244498,
+      "frac_pos": 0.117417
+     },
+     {
+      "bin": 3,
+      "n": 308,
+      "mean_pred": 0.346247,
+      "frac_pos": 0.12013
+     },
+     {
+      "bin": 4,
+      "n": 193,
+      "mean_pred": 0.445709,
+      "frac_pos": 0.119171
+     },
+     {
+      "bin": 5,
+      "n": 172,
+      "mean_pred": 0.5443,
+      "frac_pos": 0.25
+     },
+     {
+      "bin": 6,
+      "n": 86,
+      "mean_pred": 0.64077,
+      "frac_pos": 0.093023
+     },
+     {
+      "bin": 7,
+      "n": 57,
+      "mean_pred": 0.748436,
+      "frac_pos": 0.298246
+     },
+     {
+      "bin": 8,
+      "n": 36,
+      "mean_pred": 0.860672,
+      "frac_pos": 0.25
+     },
+     {
+      "bin": 9,
+      "n": 18,
+      "mean_pred": 0.923531,
+      "frac_pos": 0.5
+     }
+    ]
+   },
+   "M_P": {
+    "auroc": 0.596806,
+    "auprc": 0.034453,
+    "brier": 0.022311,
+    "ece": 0.016544,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 114819,
+      "mean_pred": 0.006912,
+      "frac_pos": 0.021564
+     },
+     {
+      "bin": 1,
+      "n": 1266,
+      "mean_pred": 0.137279,
+      "frac_pos": 0.059242
+     },
+     {
+      "bin": 2,
+      "n": 321,
+      "mean_pred": 0.242864,
+      "frac_pos": 0.05296
+     },
+     {
+      "bin": 3,
+      "n": 117,
+      "mean_pred": 0.342382,
+      "frac_pos": 0.042735
+     },
+     {
+      "bin": 4,
+      "n": 71,
+      "mean_pred": 0.441066,
+      "frac_pos": 0.042254
+     },
+     {
+      "bin": 5,
+      "n": 28,
+      "mean_pred": 0.541141,
+      "frac_pos": 0.142857
+     },
+     {
+      "bin": 6,
+      "n": 23,
+      "mean_pred": 0.642597,
+      "frac_pos": 0.217391
+     },
+     {
+      "bin": 7,
+      "n": 4,
+      "mean_pred": 0.719218,
+      "frac_pos": 0.25
+     },
+     {
+      "bin": 8,
+      "n": 2,
+      "mean_pred": 0.823096,
+      "frac_pos": 0.0
+     }
+    ]
+   },
+   "M_VP": {
+    "auroc": 0.654695,
+    "auprc": 0.050336,
+    "brier": 0.022151,
+    "ece": 0.018855,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115066,
+      "mean_pred": 0.003914,
+      "frac_pos": 0.021179
+     },
+     {
+      "bin": 1,
+      "n": 940,
+      "mean_pred": 0.140234,
+      "frac_pos": 0.062766
+     },
+     {
+      "bin": 2,
+      "n": 334,
+      "mean_pred": 0.243303,
+      "frac_pos": 0.107784
+     },
+     {
+      "bin": 3,
+      "n": 135,
+      "mean_pred": 0.344056,
+      "frac_pos": 0.118519
+     },
+     {
+      "bin": 4,
+      "n": 70,
+      "mean_pred": 0.442959,
+      "frac_pos": 0.128571
+     },
+     {
+      "bin": 5,
+      "n": 37,
+      "mean_pred": 0.542473,
+      "frac_pos": 0.216216
+     },
+     {
+      "bin": 6,
+      "n": 19,
+      "mean_pred": 0.656544,
+      "frac_pos": 0.263158
+     },
+     {
+      "bin": 7,
+      "n": 35,
+      "mean_pred": 0.7476,
+      "frac_pos": 0.228571
+     },
+     {
+      "bin": 8,
+      "n": 14,
+      "mean_pred": 0.835931,
+      "frac_pos": 0.571429
+     },
+     {
+      "bin": 9,
+      "n": 1,
+      "mean_pred": 0.912017,
+      "frac_pos": 0.0
+     }
+    ]
+   },
+   "LR_V": {
+    "auroc": 0.645156,
+    "auprc": 0.068896,
+    "brier": 0.021352,
+    "ece": 0.007661,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115942,
+      "mean_pred": 0.013725,
+      "frac_pos": 0.02108
+     },
+     {
+      "bin": 1,
+      "n": 666,
+      "mean_pred": 0.135241,
+      "frac_pos": 0.190691
+     },
+     {
+      "bin": 2,
+      "n": 37,
+      "mean_pred": 0.229811,
+      "frac_pos": 0.297297
+     },
+     {
+      "bin": 3,
+      "n": 3,
+      "mean_pred": 0.316276,
+      "frac_pos": 0.333333
+     },
+     {
+      "bin": 4,
+      "n": 2,
+      "mean_pred": 0.463222,
+      "frac_pos": 1.0
+     },
+     {
+      "bin": 5,
+      "n": 1,
+      "mean_pred": 0.518966,
+      "frac_pos": 1.0
+     }
+    ]
+   }
+  },
+  "0.5": {
+   "M_BASE": {
+    "auroc": 0.597531,
+    "auprc": 0.045573,
+    "brier": 0.027861,
+    "ece": 0.025438,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 109901,
+      "mean_pred": 0.009114,
+      "frac_pos": 0.019781
+     },
+     {
+      "bin": 1,
+      "n": 2765,
+      "mean_pred": 0.138407,
+      "frac_pos": 0.029656
+     },
+     {
+      "bin": 2,
+      "n": 1207,
+      "mean_pred": 0.248607,
+      "frac_pos": 0.036454
+     },
+     {
+      "bin": 3,
+      "n": 781,
+      "mean_pred": 0.349834,
+      "frac_pos": 0.116517
+     },
+     {
+      "bin": 4,
+      "n": 444,
+      "mean_pred": 0.446917,
+      "frac_pos": 0.058559
+     },
+     {
+      "bin": 5,
+      "n": 526,
+      "mean_pred": 0.544715,
+      "frac_pos": 0.08365
+     },
+     {
+      "bin": 6,
+      "n": 424,
+      "mean_pred": 0.651311,
+      "frac_pos": 0.084906
+     },
+     {
+      "bin": 7,
+      "n": 312,
+      "mean_pred": 0.757185,
+      "frac_pos": 0.125
+     },
+     {
+      "bin": 8,
+      "n": 239,
+      "mean_pred": 0.856547,
+      "frac_pos": 0.154812
+     },
+     {
+      "bin": 9,
+      "n": 52,
+      "mean_pred": 0.941991,
+      "frac_pos": 0.25
+     }
+    ]
+   },
+   "M_V": {
+    "auroc": 0.65259,
+    "auprc": 0.066888,
+    "brier": 0.022623,
+    "ece": 0.018933,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 114012,
+      "mean_pred": 0.004484,
+      "frac_pos": 0.019814
+     },
+     {
+      "bin": 1,
+      "n": 1160,
+      "mean_pred": 0.138516,
+      "frac_pos": 0.077586
+     },
+     {
+      "bin": 2,
+      "n": 422,
+      "mean_pred": 0.247651,
+      "frac_pos": 0.101896
+     },
+     {
+      "bin": 3,
+      "n": 368,
+      "mean_pred": 0.347945,
+      "frac_pos": 0.130435
+     },
+     {
+      "bin": 4,
+      "n": 287,
+      "mean_pred": 0.446105,
+      "frac_pos": 0.191638
+     },
+     {
+      "bin": 5,
+      "n": 146,
+      "mean_pred": 0.54476,
+      "frac_pos": 0.267123
+     },
+     {
+      "bin": 6,
+      "n": 125,
+      "mean_pred": 0.648133,
+      "frac_pos": 0.24
+     },
+     {
+      "bin": 7,
+      "n": 64,
+      "mean_pred": 0.749461,
+      "frac_pos": 0.15625
+     },
+     {
+      "bin": 8,
+      "n": 58,
+      "mean_pred": 0.858424,
+      "frac_pos": 0.206897
+     },
+     {
+      "bin": 9,
+      "n": 9,
+      "mean_pred": 0.916553,
+      "frac_pos": 0.0
+     }
+    ]
+   },
+   "M_P": {
+    "auroc": 0.580366,
+    "auprc": 0.030878,
+    "brier": 0.022258,
+    "ece": 0.016881,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115231,
+      "mean_pred": 0.006439,
+      "frac_pos": 0.0218
+     },
+     {
+      "bin": 1,
+      "n": 968,
+      "mean_pred": 0.140195,
+      "frac_pos": 0.05062
+     },
+     {
+      "bin": 2,
+      "n": 269,
+      "mean_pred": 0.241305,
+      "frac_pos": 0.04461
+     },
+     {
+      "bin": 3,
+      "n": 122,
+      "mean_pred": 0.339837,
+      "frac_pos": 0.090164
+     },
+     {
+      "bin": 4,
+      "n": 39,
+      "mean_pred": 0.448791,
+      "frac_pos": 0.025641
+     },
+     {
+      "bin": 5,
+      "n": 12,
+      "mean_pred": 0.549538,
+      "frac_pos": 0.083333
+     },
+     {
+      "bin": 6,
+      "n": 5,
+      "mean_pred": 0.6538,
+      "frac_pos": 0.0
+     },
+     {
+      "bin": 7,
+      "n": 4,
+      "mean_pred": 0.711696,
+      "frac_pos": 0.0
+     },
+     {
+      "bin": 8,
+      "n": 1,
+      "mean_pred": 0.862124,
+      "frac_pos": 0.0
+     }
+    ]
+   },
+   "M_VP": {
+    "auroc": 0.637573,
+    "auprc": 0.0475,
+    "brier": 0.022178,
+    "ece": 0.018645,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115283,
+      "mean_pred": 0.003921,
+      "frac_pos": 0.0212
+     },
+     {
+      "bin": 1,
+      "n": 788,
+      "mean_pred": 0.138109,
+      "frac_pos": 0.091371
+     },
+     {
+      "bin": 2,
+      "n": 249,
+      "mean_pred": 0.245262,
+      "frac_pos": 0.072289
+     },
+     {
+      "bin": 3,
+      "n": 125,
+      "mean_pred": 0.346602,
+      "frac_pos": 0.144
+     },
+     {
+      "bin": 4,
+      "n": 92,
+      "mean_pred": 0.451055,
+      "frac_pos": 0.141304
+     },
+     {
+      "bin": 5,
+      "n": 53,
+      "mean_pred": 0.545154,
+      "frac_pos": 0.113208
+     },
+     {
+      "bin": 6,
+      "n": 40,
+      "mean_pred": 0.639633,
+      "frac_pos": 0.3
+     },
+     {
+      "bin": 7,
+      "n": 18,
+      "mean_pred": 0.739181,
+      "frac_pos": 0.166667
+     },
+     {
+      "bin": 8,
+      "n": 3,
+      "mean_pred": 0.819706,
+      "frac_pos": 0.0
+     }
+    ]
+   },
+   "LR_V": {
+    "auroc": 0.633515,
+    "auprc": 0.064253,
+    "brier": 0.021376,
+    "ece": 0.007456,
+    "ci95": null,
+    "n_rows": 116651,
+    "n_patients": 3000,
+    "row_prevalence": 0.022169,
+    "calibration": [
+     {
+      "bin": 0,
+      "n": 115893,
+      "mean_pred": 0.013892,
+      "frac_pos": 0.020959
+     },
+     {
+      "bin": 1,
+      "n": 652,
+      "mean_pred": 0.133479,
+      "frac_pos": 0.197853
+     },
+     {
+      "bin": 2,
+      "n": 97,
+      "mean_pred": 0.229015,
+      "frac_pos": 0.195876
+     },
+     {
+      "bin": 3,
+      "n": 6,
+      "mean_pred": 0.310031,
+      "frac_pos": 1.0
+     },
+     {
+      "bin": 4,
+      "n": 1,
+      "mean_pred": 0.450147,
+      "frac_pos": 1.0
+     },
+     {
+      "bin": 5,
+      "n": 1,
+      "mean_pred": 0.528081,
+      "frac_pos": 1.0
+     },
+     {
+      "bin": 6,
+      "n": 1,
+      "mean_pred": 0.60218,
+      "frac_pos": 1.0
+     }
+    ]
+   }
+  }
+ }
+}
